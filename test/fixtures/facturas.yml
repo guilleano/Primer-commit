@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Factura: 1
+  Fecha: 2017-11-17
+  Proveedor: MyString
+  Concepto: MyString
+  Valor: 1.5
+  Estado: MyString
+
+two:
+  Factura: 1
+  Fecha: 2017-11-17
+  Proveedor: MyString
+  Concepto: MyString
+  Valor: 1.5
+  Estado: MyString

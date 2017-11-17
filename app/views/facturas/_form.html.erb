@@ -1,0 +1,55 @@
+<%= form_with(model: factura, local: true) do |form| %>
+  <% if factura.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(factura.errors.count, "error") %> prohibited this factura from being saved:</h2>
+
+      <ul>
+      <% factura.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+  <div class="form-group">
+    <%= form.label :Factura %>
+    <div class="col-sm-6">
+    <%= form.number_field :Factura, id: :factura_Factura %>
+  </div>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Fecha %>
+    <div class="col-sm-6">
+    <%= form.date_select :Fecha, id: :factura_Fecha %>
+  </div>
+</div>
+  <div class="form-group">
+    <%= form.label :Proveedor %>
+    <div class="col-sm-6">
+    <%= form.text_field :Proveedor, id: :factura_Proveedor %>
+  </div>
+</div>
+  <div class="form-group">
+    <%= form.label :Concepto %>
+    <div class="col-sm-6">
+    <%= form.text_field :Concepto, id: :factura_Concepto %>
+  </div>
+</div>
+  <div class="form-group">
+    <%= form.label :Valor %>
+    <div class="col-sm-6">
+    <%= form.text_field :Valor, id: :factura_Valor %>
+  </div>
+</div>
+  <div class="form-group">
+    <%= form.label :Estado %>
+    <div class="col-sm-6">
+    <%= form.text_field :Estado, id: :factura_Estado %>
+  </div>
+</div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

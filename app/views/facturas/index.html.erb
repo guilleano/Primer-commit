@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Facturas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Factura</th>
+      <th>Fecha</th>
+      <th>Proveedor</th>
+      <th>Concepto</th>
+      <th>Valor</th>
+      <th>Estado</th>
+      <th colspan="6"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @facturas.each do |factura| %>
+      <tr>
+        <td><%= factura.Factura %></td>
+        <td><%= factura.Fecha %></td>
+        <td><%= factura.Proveedor %></td>
+        <td><%= factura.Concepto %></td>
+        <td><%= factura.Valor %></td>
+        <td><%= factura.Estado %></td>
+        <td><%= link_to 'Show', factura %></td>
+        <td><%= link_to 'Edit', edit_factura_path(factura) %></td>
+        <td><%= link_to 'Destroy', factura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Adicionar', new_factura_path %>
